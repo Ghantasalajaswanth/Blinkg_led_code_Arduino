@@ -1,0 +1,14 @@
+void setup() {
+  pinMode(12, INPUT_PULLUP);   // Enable internal pull-up
+  pinMode(13, OUTPUT);
+  Serial.begin(115200);
+}
+
+void loop() {
+  int v = digitalRead(12);
+
+  Serial.print("Value of push button: ");
+  Serial.println(v);
+
+  delay(1000);
+}
