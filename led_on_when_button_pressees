@@ -1,0 +1,14 @@
+void setup() {
+  pinMode(12, INPUT_PULLUP); // Enable internal pull-up
+  pinMode(13, OUTPUT);
+}
+
+void loop() {
+  int v = digitalRead(12);
+
+  if (v == LOW) {            // Button pressed
+    digitalWrite(13, HIGH);  // LED ON
+  } else {                   // Button released
+    digitalWrite(13, LOW);   // LED OFF
+  }
+}
