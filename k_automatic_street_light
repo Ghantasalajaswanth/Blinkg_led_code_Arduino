@@ -1,0 +1,22 @@
+#define LDR 2       // LDR digital output pin
+#define RELAY 8     // Relay control pin
+
+void setup() 
+{
+  pinMode(LDR, INPUT);
+  pinMode(RELAY, OUTPUT);
+}
+
+void loop() 
+{
+  int lightState = digitalRead(LDR);
+
+  if(lightState == HIGH)   // Dark condition
+  {
+    digitalWrite(RELAY, HIGH);   // Turn ON bulb
+  }
+  else                     // Bright condition
+  {
+    digitalWrite(RELAY, LOW);    // Turn OFF bulb
+  }
+}
